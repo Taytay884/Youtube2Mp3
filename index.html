@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=K2D:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Youtube2Mp3 by Itay</title>
+</head>
+<body>
+    <h1>Youtube 2 Mp3 by <span class="big-credit">Gadush</span></h1>
+    <main>
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <ul>
+                <li><p>You must have an internet connection.</p></li>
+                <li><p>disable the popup blocker of your browser. (it will bumps after the first download)</p></li>
+                <li><p>Write on each line a song, when you done, click the 'Submit' button.</p></li>
+                <li><p>*You may download each song separately by clicking the links.</p></li>
+            </ul>
+        </div>
+        <div class="form">
+            <h2>Download Zone</h2>
+            <form onsubmit="window.nahum.onSubmitSongsString(event)">
+                <textarea class="songs-string" cols="30" rows="5"></textarea>
+                <div class="buttons-container">
+                    <button type="submit">Submit</button>
+                    <button type="button" onclick="window.nahum.downloadLinks()" class="download-button" disabled>Download</button>
+                </div>
+            </form>
+        </div>
+        <div class="links">
+            <h2>Links</h2>
+            <div class="downloads-links-container"></div>
+        </div>
+    </main>
+    <script src="nahum.js" type="module"></script>
+</body>
+</html>
