@@ -1,3 +1,12 @@
+:root {
+    --header-bg-color: #f5f8fa;
+    --header-border-color: #cbd6e2;
+    --main-font-color: #33475b;
+    --body-bg-color: #fff;
+    --main-special-color: #00a4bd;
+    --second-special-color: #ff8f73;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,16 +15,17 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: floralwhite;
+    background-color: var(--body-bg-color);
+    color: var(--main-font-color);
 }
 
 h1 {
     padding-left: 10px;
     font-size: 26px;
-    background-color: turquoise;
-    color: mintcream;
+    background-color: var(--header-bg-color);
+    color: var(--main-font-color);
     box-shadow: 0 0 3px 1px #ccc;
-    text-shadow: 2px 2px 8px black;
+    /*text-shadow: 2px 2px 8px black;*/
     margin-bottom: 10px;
     height: 42px;
 }
@@ -29,14 +39,14 @@ main {
 
 .big-credit {
     font-family: 'K2D', sans-serif;
-    color: springgreen;
+    color: var(--second-special-color);
 }
 
 h2 {
     font-family: 'K2D', sans-serif;
     margin-bottom: 10px;
     padding-left: 5px;
-    border-left: 5px solid springgreen;
+    border-left: 5px solid var(--main-special-color);
 }
 
 .instructions {
@@ -50,10 +60,9 @@ h2 {
 
 .instructions ul li {
     list-style-type: none;
-    margin-bottom: 5px;
-    padding-left: 10px;
-    height: 40px;
-    border-left: 5px solid #ff00b1;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    height: 24px;
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -70,13 +79,49 @@ h2 {
 }
 
 .downloads-links-container a {
+    color: var(--main-font-color);
     list-style-type: none;
-    margin-bottom: 5px;
-    padding-left: 10px;
-    height: 40px;
-    border-left: 5px solid #ff00b1;
-    display: flex;
-    align-items: center;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 14px;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.downloads-links-container a:hover {
+    text-decoration: underline;
+}
+
+.buttons-container button {
+    padding: 5px 15px;
+    border-radius: 2px;
+    border: 1px solid var(--second-special-color);
+    color: var(--body-bg-color);
+    background-color: var(--second-special-color);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.25s ease-in-out;
+}
+
+.buttons-container button:hover:not(:disabled) {
+    color: var(--second-special-color);
+    background-color: var(--body-bg-color);
+    border: 1px solid var(--second-special-color);
+}
+
+.buttons-container button:disabled {
+    background-color: var(--second-special-color);
+    opacity: 0.7;
+    cursor: default;
+}
+
+.songs-string {
+    border-radius: 3px;
+    border: 1px solid var(--header-border-color);
+    margin: 0;
+    width: 80%;
+    height: 106px;
+    padding: 5px;
 }
 
 .downloads-links-container a span {
