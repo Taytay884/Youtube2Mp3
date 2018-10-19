@@ -44,6 +44,11 @@ function enableDownloadButton() {
     elButton.disabled = false;
 }
 
+function disableDownloadButton() {
+    let elButton = document.querySelector('.download-button');
+    elButton.disabled = true;
+}
+
 function pushLinkElementToLinksContainer(linkElement) {
     elLinks.push(linkElement);
     elLinksContainer.appendChild(linkElement);
@@ -70,6 +75,7 @@ function resetLinks() {
     while(elLinksContainer.children.length) {
         elLinksContainer.children[0].remove();
     }
+    disableDownloadButton();
 }
 
 window.nahum = {

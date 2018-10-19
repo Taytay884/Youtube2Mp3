@@ -118,10 +118,10 @@ h2 {
 .songs-string {
     border-radius: 3px;
     border: 1px solid var(--header-border-color);
-    margin: 0;
     width: 80%;
     height: 106px;
     padding: 5px;
+    margin-bottom: 5px;
 }
 
 .downloads-links-container a span {
