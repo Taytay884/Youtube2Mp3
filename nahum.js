@@ -20,6 +20,7 @@ function initTextarea () {
 
 function onSubmitSongsString (event) {
     event.preventDefault();
+    resetLinks();
     let songsString = elTextarea.value;
     let songs = utils.turnStringToArray(songsString);
     youtube.getYoutubeSongsInfo(songs, (songInfos) => {
@@ -62,7 +63,17 @@ function downloadLinks() {
     });
 }
 
+function resetLinks() {
+    elLinks = [];
+    youtubeVideoIds = [];
+    console.log(elLinksContainer.children.length);
+    while(elLinksContainer.children.length) {
+        elLinksContainer.children[0].remove();
+    }
+}
+
 window.nahum = {
     onSubmitSongsString,
-    downloadLinks
+    downloadLinks,
+    resetLinks
 };
